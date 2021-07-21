@@ -1,1 +1,1 @@
-discordbot: python discordbot.py
+discordbot: python read_bot2.py
