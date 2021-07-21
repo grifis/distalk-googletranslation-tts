@@ -50,7 +50,7 @@ async def on_message(message):
                 language = 'ja'
                 output = gTTS(text=message.content, lang=language, slow=False)
                 output.save("output.mp3")
-                source = discord.FFmpegPCMAudio("output.mp3")
+                source = discord.FFmpegOpusAudio("output.mp3")
                 message.guild.voice_client.play(source)
             else:
                 pass
