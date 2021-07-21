@@ -5,9 +5,11 @@ import os
 import subprocess
 from gtts import gTTS
 
+
 client = commands.Bot(command_prefix='.')
 voice_client = None
 channel_id = None
+token = os.environ['DISCORD_BOT_TOKEN']
 
 @client.event
 async def on_ready():
@@ -55,4 +57,4 @@ async def on_message(message):
     await client.process_commands(message)
 
 
-client.run("NzYzNDI0NDE0ODUwNjEzMjQ5.X33gZA.GpcDgThL-h4zEW1BkG5xilmMbSA")
+client.run(token)
